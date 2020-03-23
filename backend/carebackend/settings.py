@@ -79,11 +79,11 @@ DATABASES = {
         'HOST': os.environ.get("DB_HOST", "localhost"),
         'PORT': os.environ.get("DB_PORT", 5432),
         'OPTIONS': {
-            'options': '-c search_path=django,supportlocal,public'
+            'options': '-c search_path=django,saveourfaves,public'
         },
-        'USER': 'supportlocal',
-        'PASSWORD': 'supp0rtl0cal',
-        'NAME': 'postgres'
+        'USER': os.environ.get("DB_USER", "postgres"),
+        'PASSWORD': os.environ.get("DB_PASSWORD", ""),
+        'NAME': os.environ.get("DB_NAME", "")
     }
 }
 
